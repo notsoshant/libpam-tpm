@@ -45,13 +45,13 @@ Step 4: Modify `/etc/pam.d/common-auth` to include our PAM:
 auth	sufficient	pam_tpm.so
 ```
 
-Step 4: Provision FAPI, if not done already using `tss2_provision`.
+Step 5: Provision FAPI, if not done already using `tss2_provision`.
 
-Step 5: Compile `tpm.c` and enroll user
+Step 6: Compile `tpm.c` and enroll user
 
 ```sh
 gcc -o tpm-test tpm.c -ltss2-fapi
 sudo ./tpm-test
 ```
 
-Step 6: Run `su test` and check if the PIN authentication is working
+Step 7: Run `su test` and check if the PIN authentication is working
